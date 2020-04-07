@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hTu-Bw-Oe0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="um1-OW-73x">
+            <objects>
+                <viewController id="hTu-Bw-Oe0" customClass="ViewController" customModule="Zoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ndm-SC-R9Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Veq-wm-e9M">
+                                <rect key="frame" x="20" y="74" width="179" height="301"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-NY-Dfp">
+                                <rect key="frame" x="75" y="764" width="70" height="31"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="AiO-bx-t0N"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="GXr-pX-G4A"/>
+                                </constraints>
+                                <state key="normal" title="ZOOM">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnResizeImage:" destination="hTu-Bw-Oe0" eventType="touchUpInside" id="kzI-lg-3M9"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9s-f0-pEp">
+                                <rect key="frame" x="293" y="764" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchImageOnOff:" destination="hTu-Bw-Oe0" eventType="valueChanged" id="vdc-5E-BZI"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b9s-f0-pEp" firstAttribute="top" secondItem="bfc-NY-Dfp" secondAttribute="top" id="Cyl-i1-jpP"/>
+                            <constraint firstItem="xXY-tW-bNH" firstAttribute="bottom" secondItem="bfc-NY-Dfp" secondAttribute="bottom" constant="67" id="M6X-QL-ZvG"/>
+                            <constraint firstItem="b9s-f0-pEp" firstAttribute="leading" secondItem="bfc-NY-Dfp" secondAttribute="trailing" constant="148" id="Vw8-nR-RzZ"/>
+                            <constraint firstItem="bfc-NY-Dfp" firstAttribute="leading" secondItem="xXY-tW-bNH" secondAttribute="leading" constant="75" id="w9R-xs-p4s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xXY-tW-bNH"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnResize" destination="bfc-NY-Dfp" id="UQY-T9-x5a"/>
+                        <outlet property="imgView" destination="Veq-wm-e9M" id="FB2-JD-0jz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O87-Xh-c5m" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
